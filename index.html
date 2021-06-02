@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOQSistemWeb</title>
+    <!-- bootstrap 5 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- css Interior -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="display-5 font-weight-bold">Modelos</div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4">Inicio</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="Paginas/clasico.html" class="nav-link text-light pl-4">Clasico</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="Paginas/reducion" class="nav-link text-light pl-4">Reduccion de precios</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="Paginas/almacenamiento" class="nav-link text-light pl-4">Con limitacion de almacenamiento</a>
+            </li>
+            <li class="nav-item dropdown w-100">
+                <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Pedido Economico</a>
+                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <li><a href="Paginas/sincosto.html" class="dropdown-item text-light pl-4 p-2">Sin costos</a></li>
+                    <li><a href="Paginas/concosto.html" class="dropdown-item text-light pl-4 p-2">Con costos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="p-4 my-container">
+        <button class="btn my-4" id="menu-btn">Menu</button>
+        <div >
+            <div class="welcome d-flex justify-content-center align-items-center text-light ">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight text-center"><h1 class="agrandar">Bienvenidos</h1></div>
+                    <div class="p-2 bd-highlight text-center"><h2>Equipo de trabajo:</h2></div>
+                    <div class="p-2 bd-highlight"><h3>1-Gabriel Antonio Castillo Alegría CA19040</h3></div>
+                    <div class="p-2 bd-highlight"><h3>2-Reynaldo Daniel Panameño Romero PR19004 </h3></div>
+                    <div class="p-2 bd-highlight"><h3>3-Alejandra Clairé Aguilar Mata, AM19087 </h3></div>
+                    <div class="p-2 bd-highlight"><h3>4-Cristian Alexander Guardado Escobar, GE19008</h3></div>
+                    <div class="p-2 bd-highlight"><h3>5-Junior Mauricio Villalta Flores, VF19012</h3></div>
+                    <div class="p-2 bd-highlight"><h3>6-Jorge Eduardo Romero García, RG19041</h3></div>
+                    <div class="p-2 bd-highlight"><h3>7-Jorge Luis Granados Umanzor, GU19002</h3></div>
+                    <div class="p-2 bd-highlight"><h3>8-Azucena Eleticia Merlos Sandoval, MS19038</h3></div>
+                    <div class="p-2 bd-highlight"><h3>9-Erick Josué Romero Castro, RC19025</h3></div>
+                    
+                  </div>
+            </div>
+        </div>
+       
+    </section>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    <!-- mi js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+</body>
+
+</html>
