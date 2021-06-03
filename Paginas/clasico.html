@@ -40,7 +40,67 @@
     </nav>
     <section class="p-4 my-container">
         <button class="btn my-4" id="menu-btn">Menu</button>
-        
+        <div class="row  justify-content-center mt-5 ">
+            <div class="card">
+                <div class="row-4 text-center my-2 fs-3 text-light">MODELO DE INVENTARIO CLASICO.</div>
+                 <div class="row d-flex justify-content-center ">   
+                    <div class="col-4 border mx-4 bg-white">
+                        <div class="row bg-primary  text-white  mb-3 ">
+                            <p class="text-center">Datos Necesarios</p>
+                        </div>
+                       
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Costo por Unidad (opcional)</span>
+                            <input  id="C" type="number" aria-label="First name" class="form-control" >
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Demanda</span>
+                            <input  id="D" type="number" aria-label="First name" class="form-control" >
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Costo de Pedido</span>
+                            <input   id="S" type="number" aria-label="First name" class="form-control" >
+                        </div>
+                    
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Costo de mantenerlo en el inventario o almacen</span>
+                            <input  id="H" type="number" aria-label="First name" class="form-control">
+                        </div> 
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Dias de trabajo al año</span>
+                            <input  id="DTA" type="number" aria-label="First name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-4 border bg-white">
+                        <div class="row bg-primary text-white p-2 text-center mb-3">Resultado</div>
+                        <div class="input-group input-group-sm mb-3">    
+                            <span class="input-group-text">La cantidad optima</span>
+                            <input id="Q" disabled type="text" aria-label="First name" class="form-control bg-white" >
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">El numero esperado de orden </span>
+                            <input id="N" disabled type="text" aria-label="First name" class="form-control bg-white">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">El tiempo entre pedidos</span>
+                            <input id="L" disabled type="text" aria-label="First name" class="form-control bg-white" >
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Punto de reorden</span>
+                            <input id="R"  disabled type="text" aria-label="First name" class="form-control bg-white" >
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">EL coste por año</span>
+                            <input id="CTA"  disabled type="text" aria-label="First name" class="form-control bg-white" >
+                        </div>
+                        
+                    </div>
+                </div>
+                <div onl class="d-grid gap-2 col-2 mx-auto my-2">
+                    <button onclick="sindeficit()" class="btn btn-primary" >Resultado</button>
+                </div>
+            </div>
+        </div>
        
     </section>
 
