@@ -60,35 +60,36 @@ function condeficit(){
                             let NC = (DC/resultadoC);
         
 
-                            let S1 = (2*CPC*DC*CMIC)/((CFC)*(CFC+CMIC));
+                            let S1 = ((2*CPC*DC*CMIC)/((CFC)*(CFC+CMIC)));          
+
+                            
 
                             let S = Math.sqrt(S1);
-
-                            let imax = (QC-S);
+                            let imax = (resultadoC-S);
                             let imaxalcuadrado = (Math.pow(imax,2));
 
                             let salcuadrado = (Math.pow(S,2));
 
-                            let CTAC = (CUC*DC)+((NC)*(CPC))+((imaxalcuadrado)/(2*QC)*(CMIC))+((salcuadrado)/(2*QC))*(CFC);
+                            let CTAC = (CUC*DC)+(NC)*(CPC)+(((imaxalcuadrado)/(2*resultadoC))*(CMIC))+((salcuadrado)/(2*resultadoC))*(CFC);
 
-                            let SZ = ((QC*CMIC)/(CMIC+CFC));
+                            let SZ = ((resultadoC*CMIC)/(CMIC+CFC));
 
 
         
                             
         
                             let resultado1C = document.querySelector('#QC');
-                            resultado1C.value = resultadoC;
+                            resultado1C.value = resultadoC.toFixed(2);
                             let resultado2C = document.querySelector('#NC');
-                            resultado2C.value = NC;
+                            resultado2C.value = NC.toFixed(0);
                             let resultado3C = document.querySelector('#TC');
-                            resultado3C.value = TC;
+                            resultado3C.value = TC.toFixed(2);
                             let resultado4C = document.querySelector('#CUCC');
-                            resultado4C.value = imax;
+                            resultado4C.value = imax.toFixed(0);
                             let resultado5C = document.querySelector('#CTAC');
-                            resultado5C.value = CTAC;
+                            resultado5C.value = CTAC.toFixed(2);
                             let resultado6C = document.querySelector('#S');
-                            resultado6C.value = SZ;
+                            resultado6C.value = SZ.toFixed(2);
                             
 
                         }else{

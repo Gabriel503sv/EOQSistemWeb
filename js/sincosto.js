@@ -59,13 +59,13 @@ function sindeficit(){
                         
     
                         let resultado1 = document.querySelector('#Q');
-                        resultado1.value = resultado;
+                        resultado1.value = resultado.toFixed(2);;
                         let resultado2 = document.querySelector('#N');
-                        resultado2.value = N;
+                        resultado2.value = N.toFixed(2);;
                         let resultado3 = document.querySelector('#T');
-                        resultado3.value = T;
+                        resultado3.value = T.toFixed(2);;
                         let resultado4 = document.querySelector('#CTA');
-                        resultado4.value = CTA;
+                        resultado4.value = CTA.toFixed(2);;
     
                         
                         
