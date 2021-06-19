@@ -1,4 +1,5 @@
 let nArticulos;
+document.querySelector('#resultado').style.display="none";
 
 function generarTabla(){
     nArticulos = document.querySelector('#articulos').value;
@@ -9,8 +10,19 @@ function generarTabla(){
         tabla.removeChild(tabla.firstChild);
     }
 
+    document.querySelector('#variables').style.display="";
+    var vari = `
+    <div>Ki = Costo de preparación</div>
+    <div>Di = Tasa de demanda</div>
+    <div>hi = Costo de retención unitario por unidad de tiempo </div>
+    <div>ai = Requerimiento de área de almacenamiento por unidad de inventario</div>
+    `;
+    $("#variables").empty();
+    var v = document.createElement("div");
+    v.innerHTML = vari;
+    document.querySelector('#variables').appendChild(v);
     
-    if(nArticulos > 0 && nArticulos < 10){
+    if(nArticulos > 0){
         var topTable = `
         <tr>
         <th>Articulo i</th>
@@ -38,6 +50,9 @@ function generarTabla(){
         document.querySelector('#form2').style.display="block";
 
     }else{
+        document.querySelector('#form2').style.display="none";
+        document.querySelector('#variables').style.display="none";
+        document.querySelector('#resultado').style.display="none";
         alert("El numero ingresado es invalido");
     }
 }
@@ -103,11 +118,29 @@ function calcular(){
             }
         }while(valorar > 0);
         
-        resultado = "La solución óptima es ";
-        for (let y = 0; y < resultados.length; y++) {
-            resultado += `y${y+1} = ${resultados[y]} unidades `;
+        let costo = 0;
+        for (let y = 0; y < nArticulos; y++) {
+            let ki = document.getElementById(`${y}-1`).value;
+            parseFloat(ki);
+            let di = document.getElementById(`${y}-2`).value;
+            parseFloat(di);
+            let hi = document.getElementById(`${y}-3`).value;
+            parseFloat(hi);
+
+            costo += (((ki*di)/(resultados[y]))+((hi*resultados[y])/2));
         }
-        alert(resultado);
+
+        $("#resultado").empty();
+        document.querySelector('#resultado').style.display="";
+        resultado = "La solución óptima es:<br>";
+        for (let y = 0; y < resultados.length; y++) {
+            resultado += `y${y+1} = ${resultados[y].toFixed(2)} unidades<br>`;
+        }
+        resultado += `Costo = $ ${costo.toFixed(2)}/dia.<br>`;
+        // alert(resultado);
+        var r = document.createElement("div");
+        r.innerHTML = resultado;
+        document.querySelector('#resultado').appendChild(r);
 
     }else{
         alert("Por favor ingrese todos los campos");

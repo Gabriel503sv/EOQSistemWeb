@@ -61,12 +61,14 @@
                 <form action="#" class="my-2">
                     <fieldset>
                         <label for="articulos">Ingrese la cantidad de articulos: </label>
-                        <input type="text" name="articulos" id="articulos" placeholder="1-9" required>
+                        <input type="text" name="articulos" id="articulos" required>
                         <input type="button" value="Generar Tabla" onclick="generarTabla()" class="btn btn-primary">
                     </fieldset>
                 </form>
             
+                <div id="variables"></div>
                 <table id="tabla" class="my-3"></table>
+                <div id="resultado"></div>
             
                 <form id="form2" class="my-2">
                     <fieldset>
@@ -96,6 +98,8 @@
         })
     </script>
     <script src="../js/almacenamiento.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 
 </html>
