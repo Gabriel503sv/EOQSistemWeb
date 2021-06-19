@@ -40,6 +40,57 @@
     </nav>
     <section class="p-4 my-container">
         <button class="btn my-4" id="menu-btn">Menu</button>
+
+
+
+        <div class="row  justify-content-center mt-5 ">
+            <div class="card">
+                <div class="row-4 text-center my-2 fs-3 text-light">MODELO DE INVENTARIO CON REDUCCION DE PRECIOS.</div>
+                 <div class="row d-flex justify-content-center ">   
+                    <div class="col-4 border mx-4 bg-white">
+                        <div class="row bg-primary  text-white  mb-3 ">
+                            <p class="text-center">Datos Necesarios</p>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Unidades por dia</span>
+                            <input   id="D" type="number" aria-label="First name" class="form-control" >
+                        </div>
+                       
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Costo de Preparacion de la colocacion de pedidos</span>
+                            <input   id="K" type="number" aria-label="First name" class="form-control" >
+                        </div>
+                    
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Costo de mantenerlo en el inventario o almacen</span>
+                            <input  id="H" type="number" aria-label="First name" class="form-control">
+                        </div> 
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Tiempo de espera</span>
+                            <input  id="L" type="number" aria-label="First name" class="form-control">
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Precio de compra unitario c1</span>
+                            <input  id="C1" type="number" aria-label="First name" class="form-control">
+                        </div> 
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Precio de compra unitario c2</span>
+                            <input  id="C2" type="number" aria-label="First name" class="form-control">
+                        </div> 
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Tamaño del Pedido limite</span>
+                            <input  id="Q" type="number" aria-label="First name" class="form-control">
+                        </div> 
+                    </div>
+                    
+                </div>
+                <div onl class="d-grid gap-2 col-2 mx-auto my-2">
+                    <button onclick="reduccion()" class="btn btn-primary" >Resultado</button>
+                </div>
+            </div>
+        </div>
         
        
     </section>
