@@ -4,6 +4,8 @@ document.querySelector('#resultado').style.display="none";
 function generarTabla(){
     nArticulos = document.querySelector('#articulos').value;
     parseInt(nArticulos, 10);
+    $("#resultado").empty();
+    document.querySelector('#resultado').style.display="none";
 
     let tabla = document.querySelector('#tabla');
     while(tabla.firstChild){
